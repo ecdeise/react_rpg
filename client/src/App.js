@@ -5,7 +5,7 @@ import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
-import CharacterGenerator from './components/CharacterGenerator';
+import CharacterGenerator from './components/charactergenerator/CharacterGenerator';
 import './App.css';
 
 class App extends Component {

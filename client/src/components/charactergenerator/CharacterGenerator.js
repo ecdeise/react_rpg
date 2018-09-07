@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import DiceRoller from './common/DiceRoller';
-import DiceDisplay from './dicedisplay/DiceDisplay';
+import DiceRoller from '../common/DiceRoller';
+import DiceDisplay from '../dicedisplay/DiceDisplay';
+import PropTypes from 'prop-types';
 
 class CharacterGenerator extends Component {
   constructor(props) {
@@ -125,5 +126,11 @@ class CharacterGenerator extends Component {
     );
   }
 }
+
+CharacterGenerator.propTypes = {
+  modifier: PropTypes.number,
+  sidecount: PropTypes.number,
+  dicecount: PropTypes.number
+};
 
 export default CharacterGenerator;

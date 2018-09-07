@@ -5,17 +5,19 @@ class DiceDisplay extends Component {
     if (this.props.rolls) {
       const rollList = this.props.rolls;
       var rollListItems = rollList.map((roll, index) => (
-        <li key={index}>
-          {roll.d}d Value: {roll.roll}
+        <li class="list-group-item" key={index}>
+          {roll.d}d Result: {roll.roll}
         </li>
       ));
     }
 
     return (
-      <div className="card">
+      <div className="card w-25" style={{ marginTop: 1 + 'em' }}>
         <div className="card-body">
-          <h5 className="card-title">Results</h5>
-          <h6 className="card-subtitle mb-2">{rollListItems}</h6>
+          <h5 className="card-title">Rolls</h5>
+
+          <ul class="list-group list-group">{rollListItems}</ul>
+
           <p className="card-text text-muted">
             Modifier: {this.props.modifier}
           </p>
